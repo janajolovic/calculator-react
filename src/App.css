@@ -49,6 +49,10 @@ input[type="text"] {
   grid-row: 1;
 }
 
+#c {
+  color: #262834;
+}
+
 #result {
   grid-column: 3/5;
   color: #262834;
@@ -65,7 +69,14 @@ button {
   font-weight: 500;
 }
 
+button:hover {
+  background-color: #353742;
+}
+
 .highlight {
   background-color: #56cbdb;
 }
 
+.highlight:hover {
+  background-color: #2ea1b1;
+}
