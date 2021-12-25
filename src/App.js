@@ -16,6 +16,17 @@ function App() {
     setResult(result.slice(0, result.length - 1))
   }
 
+  const calculate = () => {
+    try {
+      setResult(eval(result).toString());
+    } catch (err) {
+      setResult("Error");
+      setTimeout(() => {
+        setResult("")
+      }, 1000)
+    }
+  }
+
   return (
     <div className="container">
       <form>
@@ -39,7 +50,7 @@ function App() {
         <button className="highlight" name="+" onClick={handleClick}>+</button>
         <button name="0" onClick={handleClick}>0</button>
         <button name="." onClick={handleClick}>.</button>
-        <button className="highlight" name="=" onClick={handleClick} id="result">=</button>
+        <button className="highlight" name="=" onClick={calculate} id="result">=</button>
       </div>
     </div>
   );
