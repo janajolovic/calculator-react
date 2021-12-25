@@ -8,13 +8,17 @@ function App() {
     setResult(result.concat(e.target.name));
   }
 
+  const clear = () => {
+    setResult("")
+  }
+  
   return (
     <div className="container">
       <form>
         <input value={result} type="text"/>
       </form>
       <div className="keypad">
-        <button id="clear" onClick={handleClick}>Clear</button>
+        <button id="clear" onClick={clear}>Clear</button>
         <button id="c" onClick={handleClick}>C</button>
         <button name="/" onClick={handleClick}>&divide;</button>
         <button name="7" onClick={handleClick}>7</button>
@@ -31,7 +35,7 @@ function App() {
         <button name="+" onClick={handleClick}>+</button>
         <button name="0" onClick={handleClick}>0</button>
         <button name="." onClick={handleClick}>.</button>
-        <button name="=" onClick={handleClick}>=</button>
+        <button name="=" onClick={handleClick} id="result">=</button>
       </div>
     </div>
   );
