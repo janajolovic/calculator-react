@@ -55,5 +55,17 @@ input[type="text"] {
   grid-row: 5;
 }
 
+button {
+  margin: 5px;
+  border: none;
+  background-color: #262834;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+}
 
+.highlight {
+  background-color: #56cbdb;
+}
 
